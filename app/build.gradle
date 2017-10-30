@@ -60,6 +60,10 @@ dependencies {
     compile 'com.jakewharton.rxbinding:rxbinding-support-v4:1.0.0'
     compile 'com.jakewharton.rxbinding:rxbinding-appcompat-v7:1.0.0'
 
+    //Butterknife
+    compile 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
     //AutoValue
     provided "com.google.auto.value:auto-value:1.5.2"
     provided 'com.ryanharter.auto.value:auto-value-gson:0.6.0'

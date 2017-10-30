@@ -2,6 +2,8 @@ package io.ferreyra.blinkist_code_challege.network;
 
 import java.util.List;
 
+import io.ferreyra.blinkist_code_challege.network.model.BlkBook;
+import io.ferreyra.blinkist_code_challege.network.model.BlkBooks;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
 import rx.Observable;
@@ -13,5 +15,5 @@ import rx.Observable;
 public interface BlkApi {
 
     @GET("v4/books?updated_since_etag=15077351087000")
-    Observable<List<BlkBook>> getBooks(@Query("skip") int skip, @Query("limit") int limit);
+    Observable<BlkBooks> getBooks(@Query("skip") int skip, @Query("limit") int limit);
 }

@@ -1,4 +1,4 @@
-package io.ferreyra.blinkist_code_challege.network;
+package io.ferreyra.blinkist_code_challege.network.model;
 
 import android.os.Parcelable;
 
@@ -27,7 +27,7 @@ public abstract class BlkBook implements Parcelable {
     public abstract Long etag();
 
     @SerializedName("published_at")
-    public abstract DateTime publishedAt();
+    public abstract String publishedAt();
 
     @SerializedName("discoverable")
     public abstract boolean discoverable();
