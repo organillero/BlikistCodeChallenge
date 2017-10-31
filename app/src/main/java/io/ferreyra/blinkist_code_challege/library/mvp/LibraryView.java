@@ -47,4 +47,12 @@ public class LibraryView extends ConstraintLayout {
 //        return this.adapter.getEventViewClickedObservable();
 //    }
 
+    public void showProgressBar (){
+
+    }
+
+    public void hideProgressBar (){
+
+    }
+
 }

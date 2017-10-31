@@ -3,11 +3,9 @@ package io.ferreyra.blinkist_code_challege.library.mvp;
 import java.util.List;
 
 import io.ferreyra.blinkist_code_challege.model.BlkBook;
-import io.ferreyra.blinkist_code_challege.model.BlkBooks;
 import io.ferreyra.blinkist_code_challege.network.BlkApi;
 import io.ferreyra.blinkist_code_challege.persistance.BooksDAO;
 import rx.Observable;
-import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
 /**

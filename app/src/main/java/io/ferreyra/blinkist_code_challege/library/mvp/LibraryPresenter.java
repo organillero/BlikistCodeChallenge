@@ -35,10 +35,12 @@ public class LibraryPresenter {
 
     private Subscription getBooks() {
         return model.getBooks()
-                //.subscribeOn(Schedulers.io())
+
                 .observeOn(AndroidSchedulers.mainThread())
+                //.doOnSubscribe() show progressBar
+                //.doOnCompleted() hide progressBar
                 .subscribe(
-                        books -> view.setBooks(books),
+                        view::setBooks,
                         error ->  Log.e("Error", error.getLocalizedMessage())
                 );
     }
