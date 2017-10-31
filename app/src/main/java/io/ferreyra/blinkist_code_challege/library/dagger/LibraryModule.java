@@ -6,9 +6,9 @@ import com.squareup.picasso.Picasso;
 
 import dagger.Module;
 import dagger.Provides;
-import io.ferreyra.blinkist_code_challege.library.mvp.LibraryAdapter;
 import io.ferreyra.blinkist_code_challege.library.mvp.LibraryModel;
 import io.ferreyra.blinkist_code_challege.library.mvp.LibraryPresenter;
+import io.ferreyra.blinkist_code_challege.library.mvp.LibraryStickyAdapter;
 import io.ferreyra.blinkist_code_challege.library.mvp.LibraryView;
 import io.ferreyra.blinkist_code_challege.network.BlkApi;
 import io.ferreyra.blinkist_code_challege.persistance.AppDatabase;
@@ -28,13 +28,13 @@ public class LibraryModule {
 
     @Provides
     @LibraryScope
-    public LibraryAdapter providesMainAdapter (Picasso picasso){
-        return new LibraryAdapter(picasso);
+    public LibraryStickyAdapter providesSectionsMainAdapter (Picasso picasso){
+        return new LibraryStickyAdapter(picasso);
     }
 
     @Provides
     @LibraryScope
-    public LibraryView providesMainView (LibraryAdapter adapter){
+    public LibraryView providesMainView (LibraryStickyAdapter adapter){
             return new LibraryView(activity, adapter);
     }
 
