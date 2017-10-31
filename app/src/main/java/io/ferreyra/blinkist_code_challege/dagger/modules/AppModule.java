@@ -17,6 +17,7 @@ public class AppModule {
 
     public AppModule(Context context) {
         this.context = context;
+
     }
 
     @AppScope

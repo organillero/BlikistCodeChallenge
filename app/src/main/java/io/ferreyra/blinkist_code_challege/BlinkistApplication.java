@@ -2,6 +2,8 @@ package io.ferreyra.blinkist_code_challege;
 
 import android.app.Application;
 
+import net.danlew.android.joda.JodaTimeAndroid;
+
 import io.ferreyra.blinkist_code_challege.dagger.AppComponent;
 import io.ferreyra.blinkist_code_challege.dagger.DaggerAppComponent;
 import io.ferreyra.blinkist_code_challege.dagger.modules.AppModule;
@@ -21,6 +23,8 @@ public class BlinkistApplication extends Application {
         appComponent = DaggerAppComponent.builder()
                 .appModule(new AppModule(this))
                 .build();
+
+        JodaTimeAndroid.init(this);
     }
 
     public AppComponent getComponent() {

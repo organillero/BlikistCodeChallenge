@@ -6,6 +6,8 @@ import android.support.annotation.NonNull;
 
 import com.google.gson.annotations.SerializedName;
 
+import org.joda.time.DateTime;
+
 
 /**
  * Created by carlos on 10/29/17.
@@ -23,7 +25,7 @@ public  class BlkBook{
     private  Long etag;
 
     @SerializedName("published_at")
-    private  String publishedAt;
+    private DateTime publishedAt;
 
     @SerializedName("discoverable")
     private  boolean discoverable;
@@ -75,11 +77,12 @@ public  class BlkBook{
     * GETTERS AND SETTERS
     * */
 
+    @NonNull
     public String getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(@NonNull String id) {
         this.id = id;
     }
 
@@ -91,11 +94,11 @@ public  class BlkBook{
         this.etag = etag;
     }
 
-    public String getPublishedAt() {
+    public DateTime getPublishedAt() {
         return publishedAt;
     }
 
-    public void setPublishedAt(String publishedAt) {
+    public void setPublishedAt(DateTime publishedAt) {
         this.publishedAt = publishedAt;
     }
 
