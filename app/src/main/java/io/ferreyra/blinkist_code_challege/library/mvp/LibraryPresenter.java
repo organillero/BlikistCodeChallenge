@@ -35,10 +35,10 @@ public class LibraryPresenter {
 
     private Subscription getBooks() {
         return model.getBooks()
-                .subscribeOn(Schedulers.io())
+                //.subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(
-                        books -> view.setBooks(books.books()),
+                        books -> view.setBooks(books),
                         error ->  Log.e("Error", error.getLocalizedMessage())
                 );
     }

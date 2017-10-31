@@ -11,7 +11,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import io.ferreyra.blinkist_code_challege.R;
-import io.ferreyra.blinkist_code_challege.network.model.BlkBook;
+import io.ferreyra.blinkist_code_challege.model.BlkBook;
 
 
 /**

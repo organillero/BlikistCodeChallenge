@@ -11,6 +11,7 @@ import io.ferreyra.blinkist_code_challege.library.mvp.LibraryModel;
 import io.ferreyra.blinkist_code_challege.library.mvp.LibraryPresenter;
 import io.ferreyra.blinkist_code_challege.library.mvp.LibraryView;
 import io.ferreyra.blinkist_code_challege.network.BlkApi;
+import io.ferreyra.blinkist_code_challege.persistance.AppDatabase;
 
 /**
  * Created by carlos on 10/19/17.
@@ -39,8 +40,8 @@ public class LibraryModule {
 
     @Provides
     @LibraryScope
-    public LibraryModel providesMainModel (BlkApi seatGeekNetwork){
-        return new LibraryModel(seatGeekNetwork);
+    public LibraryModel providesMainModel (BlkApi seatGeekNetwork, AppDatabase db){
+        return new LibraryModel(seatGeekNetwork, db.booksDAO());
     }
 
     @Provides

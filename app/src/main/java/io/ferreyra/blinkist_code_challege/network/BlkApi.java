@@ -1,9 +1,7 @@
 package io.ferreyra.blinkist_code_challege.network;
 
-import java.util.List;
-
-import io.ferreyra.blinkist_code_challege.network.model.BlkBook;
-import io.ferreyra.blinkist_code_challege.network.model.BlkBooks;
+import io.ferreyra.blinkist_code_challege.model.BlkBook;
+import io.ferreyra.blinkist_code_challege.model.BlkBooks;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
 import rx.Observable;

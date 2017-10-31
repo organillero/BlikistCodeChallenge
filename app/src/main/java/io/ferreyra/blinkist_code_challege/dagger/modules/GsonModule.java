@@ -10,7 +10,6 @@ import com.google.gson.GsonBuilder;
 import dagger.Module;
 import dagger.Provides;
 import io.ferreyra.blinkist_code_challege.dagger.AppScope;
-import io.ferreyra.blinkist_code_challege.network.BlkAdapterAdapter;
 
 @Module
 public class GsonModule {
@@ -19,7 +18,6 @@ public class GsonModule {
     @Provides
     public Gson providesGson (){
         return new GsonBuilder()
-                .registerTypeAdapterFactory(BlkAdapterAdapter.create())
                 .create();
 
     }

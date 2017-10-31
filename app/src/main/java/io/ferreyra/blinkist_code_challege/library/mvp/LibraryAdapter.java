@@ -16,7 +16,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import io.ferreyra.blinkist_code_challege.R;
-import io.ferreyra.blinkist_code_challege.network.model.BlkBook;
+import io.ferreyra.blinkist_code_challege.model.BlkBook;
 import rx.Observable;
 import rx.subjects.PublishSubject;
 
@@ -74,8 +74,8 @@ public class LibraryAdapter extends RecyclerView.Adapter<LibraryAdapter.ViewHold
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
             BlkBook book = books.get(position);
-            this.picasso.load(book.imageURL()).into(holder.imageView);
-            holder.title.setText(book.title());
+            this.picasso.load(book.getImageURL()).into(holder.imageView);
+            holder.title.setText(book.getTitle());
     }
 
     @Override
